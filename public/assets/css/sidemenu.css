@@ -1,0 +1,17 @@
+.side-menu-container{
+	width: 230px;
+	background-color: rgba( 80, 200, 120, .6 );
+	min-height: 100vh;
+}
+.side-menu-container .profile-container{
+  height: 200px;
+  padding: 20px 30px;
+  text-align: center;
+}
+.profile-container .img-wrapper{
+	width: 100px;
+	display: inline-block;
+}
+.profile-container .img-wrapper img{
+	width: 100%;
+}

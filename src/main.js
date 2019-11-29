@@ -1,8 +1,24 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import vClickOutside from 'v-click-outside';
+import VueSweetalert2 from 'vue-sweetalert2';
+import VueMoment from 'vue-moment';
+import JsonExcel from 'vue-json-excel'
+ 
+import $ from 'jquery'; 
 
-Vue.config.productionTip = false
+import App from './App.vue';
+import router from './router';
+
+Vue.use(vClickOutside);
+Vue.use(VueSweetalert2);
+Vue.use(VueMoment);
+Vue.component('downloadExcel', JsonExcel)
+Vue.config.productionTip = false;
+
+// const $ = require('jquery');
+window.$ = $; 
 
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App)
 }).$mount('#app')
