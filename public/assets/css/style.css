@@ -4,7 +4,8 @@
 
 /* gloabl css */
 :root {
-  --primary-font: 'Helvetica Light';
+  --primary-font: 'Noir Pro';
+  /*--primary-font: 'Helvetica Light';*/
   --secondary-font: 'Helvetica Medium';
 
   --font-black: #333;
@@ -85,6 +86,15 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) { overflow-y: v
     position: relative;
     height: 100vh;
     overflow-y: auto;
+  }
+  .dashboard-container{
+    display: flex;
+  }
+  .side-menu-content{
+    width: 250px;
+  }
+  .child-content{
+    flex: 1;
   }
   .child-content{
     min-height: calc( 100vh - 300px );

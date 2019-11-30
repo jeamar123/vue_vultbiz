@@ -12,6 +12,20 @@
 
 
 
+/* ----------- NOIR PRO ----------------- */
+    @font-face {
+        font-family: 'Noir Pro'; /* Global font */
+        src: url('../fonts/noirpro/NoirPro-Regular.otf')  format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Noir Pro Light'; /* Global font */
+        src: url('../fonts/noirpro/NoirPro-Light.otf')  format('truetype');
+    }
+
+
+
+
 
 /* ----------- Helvetica ----------------- */
     @font-face {

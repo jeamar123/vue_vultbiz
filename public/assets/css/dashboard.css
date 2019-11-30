@@ -1,0 +1,19 @@
+.home-container{
+	max-height: calc( 100vh - 50px );
+	overflow-y: auto;
+	padding: 10px 15px;
+}
+.home-container .box-item-container{
+	display: flex;
+}
+.box-item-container .box-items{
+	flex: 1;
+	margin: 10px 5px;
+	background: #fdfdfd;
+	min-height: 140px;
+}
+.list-container{
+	margin: 10px 5px;
+	background: #fdfdfd;
+	min-height: 140px;
+}

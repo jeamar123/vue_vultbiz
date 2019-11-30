@@ -28,7 +28,7 @@ export default new Router({
     {
       path: '/dashboard',
       name: 'Dashboard',
-      // redirect: '/auth',
+      redirect: '/dashboard/home',
       component: Dashboard,
       // meta: { auth: true },
       children: [
