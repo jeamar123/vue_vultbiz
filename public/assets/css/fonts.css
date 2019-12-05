@@ -10,23 +10,6 @@
     }
 
 
-
-
-/* ----------- NOIR PRO ----------------- */
-    @font-face {
-        font-family: 'Noir Pro'; /* Global font */
-        src: url('../fonts/noirpro/NoirPro-Regular.otf')  format('truetype');
-    }
-
-    @font-face {
-        font-family: 'Noir Pro Light'; /* Global font */
-        src: url('../fonts/noirpro/NoirPro-Light.otf')  format('truetype');
-    }
-
-
-
-
-
 /* ----------- Helvetica ----------------- */
     @font-face {
         font-family: 'Helvetica Thin'; /* Global font */
@@ -74,29 +57,3 @@
         src: url('../fonts/myriad/MyriadPro-Light.otf')  format('truetype');
     }
 
-
-
-
-
-/*------------- Proximanova ---------------*/
-    @font-face {
-        font-family: 'Proximanova'; /* Global font */
-        src: url('../fonts/proximanova/Proxima Nova Regular.ttf')  format('truetype');
-    }
-
-    @font-face {
-        font-family: 'Proximanova Thin'; /* Global font */
-        src: url('../fonts/proximanova/Proxima Nova Thin.ttf')  format('truetype');
-    }
-
-
-/*------------- Comfortaa ---------------*/
-    @font-face {
-        font-family: 'Comfortaa'; /* Global font */
-        src: url('../fonts/comforta/Comfortaa-Regular.ttf')  format('truetype');
-    }
-
-    @font-face {
-        font-family: 'Comfortaa Light'; /* Global font */
-        src: url('../fonts/comforta/Comfortaa-Light.ttf')  format('truetype');
-    }

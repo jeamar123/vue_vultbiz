@@ -1,6 +1,6 @@
 .navbar{
 	width: 100%;
-  background-color: #fff;
+  background-color: var(--navbar-bg-color);
   -webkit-box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);
   box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);
   border-radius: 3px;
@@ -15,7 +15,7 @@
 .navbar ul li a{
   display: block;
   font-size: 14px;
-  color: #1036408a;
+  color: var(--navbar-font-color);
   padding: 15px 25px;
   font-weight: 700;
   font-family: var( --primary-font );
@@ -31,7 +31,7 @@
 }
 .navbar ul li.active a,
 .navbar ul li:hover a{
-  color: #053640;
+  color: var(--navbar-active-color);
 }
 .navbar ul li:last-child a {
 	/*border: none;*/

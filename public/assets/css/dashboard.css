@@ -11,9 +11,55 @@
 	margin: 10px 5px;
 	background: #fdfdfd;
 	min-height: 140px;
+	-webkit-box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);
+  box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);
+  padding: 20px;
 }
-.list-container{
-	margin: 10px 5px;
-	background: #fdfdfd;
-	min-height: 140px;
+.box-item-container .box-items .box-title{
+	color: var(--primary-font-color);
+  font-size: 16px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.flex-1-5{
+	flex: 1.5;
+}
+.recent-visitors .box-title{
+	display: flex;
+}
+.recent-visitors .box-title p{
+	flex: 1;
+}
+.recent-visitors .box-title .icon-box{
+	width: 50px;
+	text-align: center;
+}
+.recent-visitors .box-title .icon-box i{
+	font-size: 18px;
+}
+
+.recent-visitors .box-title{
+	border-bottom: 1px solid #eee;
+}
+.recent-visitors tbody{
+	border: none;
+}
+.recent-visitors td{
+	padding: 8px 0;
+	color: var(--secondary-font-color);
+}
+.recent-visitors td:last-child{
+	width: 50px;
+	text-align: center;
+}
+.recent-visitors .icon-box{
+	cursor: pointer;
+	display: inline-block;
+}
+.icon-box{
+	width: 15px;
+}
+.icon-box img{
+	width: 100%;
 }

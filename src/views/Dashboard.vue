@@ -13,9 +13,10 @@
 		  <div class="dashboard-container">
 			  <div class="side-menu-content">
 			  	<div class="side-menu-container">
-			  		
+			  		<div class="top-logo-container">
+			  			
+			  		</div>
 			  		<div class="profile-container">
-			  			<!-- <a href="javascript:void(0)"><i class="fa fa-power-off"></i></a> -->
 			  			<div class="img-wrapper">
 			  				<img :src="'../assets/img/avatar2.png'">
 			  			</div>

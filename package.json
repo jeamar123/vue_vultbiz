@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "chart.js": "^2.9.3",
     "core-js": "^3.3.2",
     "jquery": "^3.4.1",
     "v-click-outside": "^3.0.0",
@@ -37,8 +38,8 @@
       "eslint:recommended"
     ],
     "rules": {
-      "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
-      "no-mixed-spaces-and-tabs": 0
+      "no-mixed-spaces-and-tabs": 0,
+      "no-unused-vars": "off"
     },
     "parserOptions": {
       "parser": "babel-eslint"
