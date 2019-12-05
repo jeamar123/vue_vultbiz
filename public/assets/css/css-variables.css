@@ -31,12 +31,12 @@
 
 
   /*---------sidemenu variables---------*/
-    --sidemenu-bg-color: #333;
-    --sidemenu-logo-bg-color: #000;
+    --sidemenu-bg-color: #028476;
+    --sidemenu-logo-bg-color: #028476;
     --profile-bg-color: rgba(68,68,68,.57);
     --sidemenu-font-color: #ddd;
-    --sidemenu-secondary-font-color: #999;
-    --item-font-color: #999;
+    --sidemenu-secondary-font-color: #bbb;
+    --item-font-color: #aaa;
     --item-active-color: #ddd;
   /*------------------------------------*/
 

@@ -75,6 +75,7 @@
 	flex: 1;
 	font-size: 12px;
 	text-transform: uppercase;
+	font-family: var(--primary-bold-font);
 }
 .menu-links-container .menu-link-item.active .item-icon,
 .menu-links-container .menu-link-item:hover .item-icon{

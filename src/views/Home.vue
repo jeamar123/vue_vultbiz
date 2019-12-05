@@ -7,13 +7,18 @@
 					Profile Views 
 				</p>
 				<div class="chart-container">
-					<canvas id="profile-views-chart"></canvas>
+					<profileViewsChart :chartData="profileViewsChartData"></profileViewsChart>
 				</div>
+				<dateFilter></dateFilter>
 			</div>
 			<div class="box-items">
 				<p class="box-title">
 					Daily Sales
 				</p>
+				<div class="chart-container">
+					<dailySalesChart :chartData="dailySalesChartData"></dailySalesChart>
+				</div>
+				<dateFilter></dateFilter>
 			</div>
 			<!-- <div class="box-items">
 				<p class="box-title">

@@ -12,6 +12,7 @@
     "chart.js": "^2.9.3",
     "core-js": "^3.3.2",
     "jquery": "^3.4.1",
+    "v-calendar": "^0.9.7",
     "v-click-outside": "^3.0.0",
     "vue": "^2.6.10",
     "vue-json-excel": "^0.2.98",
@@ -34,12 +35,10 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+      "plugin:vue/essential"
     ],
     "rules": {
-      "no-mixed-spaces-and-tabs": 0,
-      "no-unused-vars": "off"
+      "no-mixed-spaces-and-tabs": 0
     },
     "parserOptions": {
       "parser": "babel-eslint"
