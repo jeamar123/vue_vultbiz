@@ -18,14 +18,14 @@ export default {
               label: 'Number of Visitors',
               data: [0, 0, 1, 2, 67, 62, 27, 14],
               backgroundColor: [
-                'rgba(79, 182, 168,.5)', // Green
-                'rgba(79, 182, 168,.5)', // Green
-                'rgba(79, 182, 168,.5)', // Green
-                'rgba(79, 182, 168,.5)', // Green
-                'rgba(79, 182, 168,.5)', // Green
-                'rgba(79, 182, 168,.5)', // Green
-                'rgba(79, 182, 168,.5)', // Green
-                'rgba(79, 182, 168,.5)', // Green
+                'rgba(79, 182, 168,.5)',
+                'rgba(79, 182, 168,.5)',
+                'rgba(79, 182, 168,.5)',
+                'rgba(79, 182, 168,.5)',
+                'rgba(79, 182, 168,.5)',
+                'rgba(79, 182, 168,.5)',
+                'rgba(79, 182, 168,.5)',
+                'rgba(79, 182, 168,.5)',
               ],
               borderColor: [
                 'rgba(79, 182, 168,.8)',

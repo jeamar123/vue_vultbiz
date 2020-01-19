@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import axios from 'axios'
 
 axios.defaults.baseURL = process.env.BASE_URL;
-// axios.defaults.serverUrl = 'http://mednefits.local';
+axios.defaults.serverUrl = 'http://localhost:8000';
+axios.defaults.user_id = null;
 
 
 import Main from './views/Main.vue'
@@ -11,6 +12,8 @@ import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import Dashboard from './views/Dashboard.vue'
 import Home from './views/Home.vue'
+import UserList from './views/UserList.vue'
+import Settings from './views/Settings.vue'
 
 Vue.use(Router)
 Vue.use(axios)
@@ -22,9 +25,15 @@ export default new Router({
   linkActiveClass: 'active',
   routes: [
     { path: '*', redirect: '/auth/login'},
-    { path: '/', name: 'Main', component: Main },
-    { path: '/auth/login', name: 'Login', component: Login },
-    { path: '/auth/register', name: 'Register', component: Register },
+    { 
+      path: '/', 
+      name: 'Main', 
+      component: Main,
+      children: [
+        { name: 'Login', path: '/auth/login', component: Login },
+        { name: 'Register', path: '/auth/register', component: Register },
+      ]
+    },
     {
       path: '/dashboard',
       name: 'Dashboard',
@@ -33,6 +42,8 @@ export default new Router({
       // meta: { auth: true },
       children: [
         { name: 'Home', path: '/dashboard/home', component: Home },
+        { name: 'UserList', path: '/dashboard/user-list', component: UserList },
+        { name: 'Settings', path: '/dashboard/settings', component: Settings },
       ]
     },
     

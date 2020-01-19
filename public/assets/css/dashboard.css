@@ -24,8 +24,12 @@
   font-family: var(--primary-bold-font);
 }
 
+
 .flex-1-5{
 	flex: 1.5;
+}
+.flex-0-5{
+	flex: 0.5;
 }
 .recent-visitors .box-title{
 	display: flex;
@@ -43,6 +47,12 @@
 
 .recent-visitors .box-title{
 	border-bottom: 1px solid #eee;
+}
+.recent-visitors thead tr th{
+	text-align: left !important;
+	border: none;
+	padding: 5px 0;
+	font-family: var(--primary-bold-font);
 }
 .recent-visitors tbody{
 	border: none;

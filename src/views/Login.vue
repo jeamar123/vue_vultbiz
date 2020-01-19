@@ -1,24 +1,19 @@
 <template>
 	<div class="auth-container">
-
-		<div class="logo-wrapper">
-			<!-- <img :src="'../assets/img/logo_white.png'"> -->
-		</div>
-
-		<div class="login-wrapper">
-			<form>
-				<div class="form-div">
-					<label>Email</label>
-					<input type="text" class="form-input">
-				</div>
-				<div class="form-div">
-					<label>Password</label>
-					<input type="password" class="form-input">
-				</div>
-				
-				<button class="btn login-btn" v-on:click="login()">LOGIN</button>
-			</form>
-		</div>
+		<form>
+			<p class="auth-title">Login</p>
+			<div class="form-div">
+				<label>Email Address</label>
+				<input type="text" name="" v-model="formData.email">
+			</div>
+			<div class="form-div">
+				<label>Password</label>
+				<input type="password" name="" v-model="formData.password">
+			</div>
+			<div class="form-div btn-container txt-right">
+				<button class="btn btn-submit" v-on:click="submitLogin( formData )">Submit</button>
+			</div>
+		</form>
   </div>
 </template>
 

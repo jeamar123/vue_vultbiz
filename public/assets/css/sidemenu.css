@@ -4,11 +4,14 @@
 .side-menu-container{
 	/*background-color: rgba( 80, 200, 120, .6 );*/
 	background-color: var(--sidemenu-bg-color);
-	min-height: 100vh;
-	margin-top: -50px;
+  min-height: 100vh;
+  height: calc(100% + 50px);
+  margin-top: -52px;
 	/*min-height: calc(100vh - 50px);*/
-	-webkit-box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);
-  box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);
+	/*-webkit-box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);
+  box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);*/
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+  /*border: 1px solid #ddd;*/
 }
 .side-menu-container .top-logo-container{
 	height: 50px;
@@ -31,12 +34,14 @@
 }
 .profile-container .img-wrapper img{
 	width: 100%;
+	/*border-radius: 50%;
+	border: 1px solid #eee;*/
 }
 .profile-container p.user-name{
 	margin-top: 10px;
-	font-size: 14px;
+	font-size: 18px;
 	font-family: var(--primary-bold-font);
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 .profile-container p.greeting{
   font-size: 12px;
@@ -47,7 +52,7 @@
 	color: var(--item-font-color);
 }
 .menu-links-container{
-	padding-top: 20px;
+	padding-top: 10px;
 }
 .menu-links-container .menu-link-item{
 	display: flex;
@@ -74,7 +79,7 @@
 	padding-left: 5px;
 	flex: 1;
 	font-size: 12px;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-family: var(--primary-bold-font);
 }
 .menu-links-container .menu-link-item.active .item-icon,
@@ -84,5 +89,6 @@
 .menu-links-container .menu-link-item.active .item-name,
 .menu-links-container .menu-link-item:hover .item-name{
 	color: var(--item-active-color);
+	opacity: 1;
 	/*border-bottom: 2px solid rgba(253,253,253,.34);*/
 }

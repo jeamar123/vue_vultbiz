@@ -1,0 +1,26 @@
+.user-list-container{
+	max-height: calc( 100vh - 50px );
+	overflow-y: auto;
+	margin: 20px;
+	background: #fdfdfd;
+	min-height: 140px;
+	-webkit-box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);
+  box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);
+  padding: 20px;
+  position: relative;
+  color: var(--primary-font-color);
+}
+.user-list-container .header-container{
+	margin-bottom: 10px;
+}
+.user-list-container .header-container .header-title{
+	font-size: 20px;
+	font-family: var(--primary-bold-font);
+}
+.user-list-container thead tr th{
+	text-align: left !important;
+  font-family: var(--primary-bold-font);
+}
+.user-list-container tbody{
+	border: none;
+}

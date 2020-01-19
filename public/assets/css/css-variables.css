@@ -1,8 +1,8 @@
 /* gloabl css */
 :root {
-  --primary-font: 'Helvetica Light';
-  --primary-bold-font: 'Helvetica Medium';
-  --secondary-font: 'Helvetica Medium';
+  --primary-font: 'Helvetica Thin';
+  --primary-bold-font: 'Helvetica Light';
+  --secondary-font: 'Helvetica Light';
 
   --font-black: #333;
   --font-gray: #777;
@@ -10,6 +10,7 @@
   --font-error: #ff0000c9;
 
   --bg-color: #fafafa;
+  /*--bg-color: #fdfdfd;*/
   --main-color: #fff;
   --secondary-color: #fafafa;
 
@@ -31,13 +32,21 @@
 
 
   /*---------sidemenu variables---------*/
-    --sidemenu-bg-color: #028476;
+    /*--sidemenu-bg-color: #028476;
     --sidemenu-logo-bg-color: #028476;
     --profile-bg-color: rgba(68,68,68,.57);
     --sidemenu-font-color: #ddd;
     --sidemenu-secondary-font-color: #bbb;
-    --item-font-color: #aaa;
-    --item-active-color: #ddd;
+    --item-font-color: #ccc;
+    --item-active-color: #fafafa;*/
+
+    --sidemenu-bg-color: #FFF;
+    --sidemenu-logo-bg-color: #fafafa;
+    --profile-bg-color: #f9f9f9;
+    --sidemenu-font-color: #444;
+    --sidemenu-secondary-font-color: #444;
+    --item-font-color: #999;
+    --item-active-color: #444;
   /*------------------------------------*/
 
 

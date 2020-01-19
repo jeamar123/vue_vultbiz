@@ -33,14 +33,25 @@
 					<p>
 						Recent Visitors
 					</p>
-					<div class="icon-box">
-						<i class="fa fa-caret-right"></i>
-					</div>
+					<router-link :to="{ name : 'UserList' }">
+						<div class="icon-box">
+		  				<i class="fa fa-caret-right"></i>
+		  			</div>
+		  		</router-link>
 				</div>
 				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Date</th>
+							<th></th>
+						</tr>
+					</thead>
 					<tbody>
-						<tr v-for="list in [1,2,3]" :key="list">
+						<tr v-for="list in [1,2,3,4,5]" :key="list">
 							<td>Jhon Doe</td>
+							<td>jhon.doe@gmail.com</td>
 							<td>22/09/2019 04:34 PM</td>
 							<td>
 								<div class="icon-box">
@@ -52,7 +63,7 @@
 				</table>
 			</div>
 
-			<div class="flex-1-5"></div>
+			<div class="flex-0-5"></div>
 		</div>
 
 		<!-- <div class="box-item-container">

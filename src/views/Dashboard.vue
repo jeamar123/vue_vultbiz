@@ -3,11 +3,13 @@
 		<section class="block-container">
 		  <div class="navbar">
 		  	<ul class="navbar-right">
-		  		<router-link tag="li" to="/dashboard/home">
-		  			<a>
-		  				<i class="fa fa-power-off"></i> 
-		  			</a>
-		  		</router-link>
+		  		<!-- <router-link tag="li" :to="{ name : 'Main' }"> -->
+		  			<li>
+			  			<a v-on:click="logout()">
+			  				<i class="fa fa-power-off"></i> 
+			  			</a>
+		  			</li>
+		  		<!-- </router-link> -->
 		  	</ul>
 		  </div>
 		  <div class="dashboard-container">
@@ -18,31 +20,32 @@
 			  		</div>
 			  		<div class="profile-container">
 			  			<div class="img-wrapper">
-			  				<img :src="'../assets/img/avatar2.png'">
+			  				<!-- <img :src="'../assets/img/avatar2.png'"> -->
+			  				<img :src="user_details.photo">
 			  			</div>
-			  			<p class="user-name">Auto Repair Shop</p>
+			  			<p class="user-name">{{ user_details.name }}</p>
 			  			<p class="greeting">Good Evening!</p>
 			  		</div>
 
 			  		<div class="menu-links-container">
-			  			<div class="menu-link-item active">
-			  				<div class="item-icon">
-			  					<img :src="'../assets/img/white icons/011-dashboard-1.png'">
+		  				<div class="menu-link-item" v-bind:class="{'active' : $route.name == 'Home'}" v-on:click="goToPage('Home')">
+				  			<div class="item-icon">
+			  					<img :src="'../assets/img/black icons/011-dashboard-1.png'">
 			  				</div>
 			  				<div class="item-name">Dashboard</div>
-			  			</div>
-			  			<div class="menu-link-item">
-			  				<div class="item-icon">
-			  					<img :src="'../assets/img/white icons/010-document.png'">
+		  				</div>
+			  			<!-- <div class="menu-link-item" v-bind:class="{'active' : $route.name == 'UserList'}" v-on:click="goToPage('UserList')">
+				  			<div class="item-icon">
+			  					<img :src="'../assets/img/black icons/010-document.png'">
 			  				</div>
 			  				<div class="item-name">User List</div>
-			  			</div>
-			  			<div class="menu-link-item">
-			  				<div class="item-icon">
-			  					<img :src="'../assets/img/white icons/008-settings-gears.png'">
+			  			</div> -->
+			  			<div class="menu-link-item" v-bind:class="{'active' : $route.name == 'Settings'}" v-on:click="goToPage('Settings')">
+				  			<div class="item-icon">
+			  					<img :src="'../assets/img/black icons/012-gear.png'">
 			  				</div>
 			  				<div class="item-name">Settings</div>
-			  			</div>
+		  				</div>
 			  		</div>
 
 			  	</div>

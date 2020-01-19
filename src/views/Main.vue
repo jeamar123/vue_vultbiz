@@ -1,20 +1,22 @@
 <template>
 	<div id="main-content" >
-		<section class="block-container">
+		<section class="block-container landing-container">
 		  <div class="navbar">
 		  	<ul class="navbar-right">
-		  		<router-link tag="li" to="Login">
+		  		<router-link tag="li" :to="{ name: 'Login' }">
 		  			<a>
 		  				Login
 		  			</a>
 		  		</router-link>
-		  		<router-link tag="li" to="Register">
+		  		<router-link tag="li" :to="{ name: 'Register' }">
 		  			<a>
 		  				Register
 		  			</a>
 		  		</router-link>
 		  	</ul>
 		  </div>
+
+		  <router-view></router-view>
 	  </section>
   </div>
   
