@@ -15,6 +15,8 @@ import Home from './views/Home.vue'
 import UserList from './views/UserList.vue'
 import Settings from './views/Settings.vue'
 
+import Vultbiz from './views/vultbiz/Home.vue'
+
 Vue.use(Router)
 Vue.use(axios)
 
@@ -44,6 +46,19 @@ export default new Router({
         { name: 'Home', path: '/dashboard/home', component: Home },
         { name: 'UserList', path: '/dashboard/user-list', component: UserList },
         { name: 'Settings', path: '/dashboard/settings', component: Settings },
+      ]
+    },
+    
+    {
+      path: '/vultbizDashboard',
+      name: 'VultbizDashboard',
+      redirect: '/vultbiz-dashboard/home',
+      component: Vultbiz,
+      // meta: { auth: true },
+      children: [
+        { name: 'Home', path: '/vultbiz-dashboard/home', component: Home },
+        // { name: 'UserList', path: '/dashboard/user-list', component: UserList },
+        // { name: 'Settings', path: '/dashboard/settings', component: Settings },
       ]
     },
     
