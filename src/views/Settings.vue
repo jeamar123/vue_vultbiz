@@ -92,11 +92,11 @@
 								<div class="dp-flex">
 									<div class="flex-1 mg-rgt-10">
 										<label>Latitude</label >
-										<input type="text" name="" v-model="user_details.latitude">
+										<input type="text" name="" v-model="user_details.latitude" readonly>
 									</div>
 									<div class="flex-1 mg-lft-10">
 										<label>Longitude</label >
-										<input type="text" name="" v-model="user_details.longitude">
+										<input type="text" name="" v-model="user_details.longitude" readonly>
 									</div>
 								</div>
 							</div>

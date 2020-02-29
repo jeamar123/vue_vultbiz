@@ -6,6 +6,7 @@
 			return {
 				showLoader : false,
 				user_details: {},
+				collapseMenuShow: [ false ]
 			}
 		},
 		created() {
@@ -19,6 +20,12 @@
       	setTimeout(()=>{
 				  this.showLoader = false;
 				},1000);
+      },
+      toggleCollapseMenu( index ){
+      	console.log(index);
+      	this.collapseMenuShow[ index ] = this.collapseMenuShow[ index ] == true ? false : true;
+      	console.log(this.collapseMenuShow[ index ]);
+      	this.$forceUpdate();
       },
       goToPage( page_name ) {
       	if( !this.user_details.activated && page_name != 'Settings' ){

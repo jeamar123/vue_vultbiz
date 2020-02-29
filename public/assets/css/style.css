@@ -519,6 +519,10 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) { overflow-y: v
     color: #222;
     font-size: 14px;
   }
+
+  .form-div input:read-only{
+    background: #eee;
+  }
 /*-------------------------------*/
 
 

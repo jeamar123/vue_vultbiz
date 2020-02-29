@@ -28,12 +28,44 @@
 			  		</div>
 
 			  		<div class="menu-links-container">
-		  				<div class="menu-link-item" v-bind:class="{'active' : $route.name == 'Home'}" v-on:click="goToPage('Home')">
+			  			<div class="menu-link-item" v-bind:class="{'active' : $route.name == 'Home'}" v-on:click="goToPage('Home')">
 				  			<div class="item-icon">
 			  					<img :src="'../assets/img/black icons/011-dashboard-1.png'">
 			  				</div>
 			  				<div class="item-name">Dashboard</div>
 		  				</div>
+
+			  			<div class="menu-drop-collapse-wrapper">
+			  				<div class="menu-link-item" v-on:click="toggleCollapseMenu(0)">
+					  			<div class="item-icon">
+				  					<img :src="'../assets/img/black icons/002-search.png'">
+				  				</div>
+				  				<div class="item-name">Collapse Menu</div>
+			  				</div>
+
+			  				<div v-show="collapseMenuShow[0] == true" class="child-menu-wrapper">
+			  					<div class="menu-link-item child-menu" >
+						  			<div class="item-icon">
+					  					<img :src="'../assets/img/black icons/002-search.png'">
+					  				</div>
+					  				<div class="item-name">Child Menu</div>
+				  				</div>
+				  				<div class="menu-link-item child-menu" >
+						  			<div class="item-icon">
+					  					<img :src="'../assets/img/black icons/002-search.png'">
+					  				</div>
+					  				<div class="item-name">Child Menu</div>
+				  				</div>
+				  				<div class="menu-link-item child-menu" >
+						  			<div class="item-icon">
+					  					<img :src="'../assets/img/black icons/002-search.png'">
+					  				</div>
+					  				<div class="item-name">Child Menu</div>
+				  				</div>
+			  				</div>
+			  			</div>
+
+		  				
 			  			<!-- <div class="menu-link-item" v-bind:class="{'active' : $route.name == 'UserList'}" v-on:click="goToPage('UserList')">
 				  			<div class="item-icon">
 			  					<img :src="'../assets/img/black icons/010-document.png'">
