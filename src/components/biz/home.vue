@@ -1,22 +1,40 @@
 <script>
+  import Modal from "../../views/modal/Modal.vue";
+
   let bizHome = {
+    components: {
+      Modal
+    },
     data() {
       return {
         empSelectorActive: {
           value: 0,
           text: ""
         },
-        // corporateViewStatus : 'CorporateDetails',
+       global_isLoginRegisterModalShow: false,
+       global_isRegisterTextShow: false,
+       global_isLoginTextShow: true,
       };
     },
     created(){
       // this.corporateViewStatus = this.$route.name;
     },
     methods: {
-      // selectCorporateView( opt ){
-      //   this.corporateViewStatus = opt;
-      //   this.$router.push( { name : opt } );
-      // }
+      ___showLoginRegisterModal() {
+        this.global_isLoginRegisterModalShow  = this.global_isLoginRegisterModalShow  ==  false ? true : false;
+      },
+      ___showLoginRegText( type ) {
+        if ( type == 'register') {
+          this.global_isRegisterTextShow = true;
+          this.global_isLoginTextShow = false;
+        }
+
+        if ( type == 'sign-in' ) {
+          this.global_isLoginTextShow = true;
+          this.global_isRegisterTextShow = false;
+        }
+        
+      }
     }
   }
   
