@@ -22,5 +22,5 @@
 </script>
 
 <style lang="scss">
-	@import "./src/assets/css/vultbizHome.scss";
+	/*@import "./src/assets/css/vultbizHome.scss";*/
 </style>
