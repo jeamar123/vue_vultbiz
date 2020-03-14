@@ -4,6 +4,7 @@
       <div class="biz-header-nav">
         <span>
           <a class="bizmode-logo"><span>Biz</span>mode</a>
+          <!-- <a><img :src="'../assets/img/Free_Sample_By_Wix (1).jpeg'"></a> -->
         </span>
         <ul>
           <li>

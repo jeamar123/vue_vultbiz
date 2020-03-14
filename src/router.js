@@ -15,7 +15,7 @@ import Home from './views/Home.vue'
 import UserList from './views/UserList.vue'
 import Settings from './views/Settings.vue'
 
-import BizMode from './views/biz/Home.vue'
+import home from './views/biz/Home.vue'
 
 Vue.use(Router)
 Vue.use(axios)
@@ -34,6 +34,7 @@ export default new Router({
       children: [
         { name: 'Login', path: '/auth/login', component: Login },
         { name: 'Register', path: '/auth/register', component: Register },
+        { name: 'home', path: '/home', component: home },
       ]
     },
     {
@@ -48,19 +49,7 @@ export default new Router({
         { name: 'Settings', path: '/dashboard/settings', component: Settings },
       ]
     },
-    
-    {
-      path: '/bizDashboard',
-      name: 'bizDashboard',
-      redirect: '/biz-dashboard/home',
-      component: BizMode,
-      // meta: { auth: true },
-      children: [
-        { name: 'Home', path: '/biz-dashboard/home', component: Home },
-        // { name: 'UserList', path: '/dashboard/user-list', component: UserList },
-        // { name: 'Settings', path: '/dashboard/settings', component: Settings },
-      ]
-    },
+
     
   ]
 })
