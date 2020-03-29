@@ -97,7 +97,7 @@
       <span>©2020 Bizmode. All rights reserved.</span>
     </div>
 
-    <Modal v-if="global_isLoginRegisterModalShow" class="login-register-modal">
+    <!-- <Modal v-if="global_isLoginRegisterModalShow" class="login-register-modal">
       <div slot="header">
         <div>
           <h2 v-if="true">Login</h2>
@@ -153,7 +153,7 @@
       <div slot="footer">
         
       </div>
-    </Modal>
+    </Modal> -->
   </div>
 </template>
 

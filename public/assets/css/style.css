@@ -594,7 +594,7 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) { overflow-y: v
 /*------- RESPONSIVE MENU BAR --------*/
   .menu-bar-wrapper {
     display: none;
-    border: 1px solid #ddd;
+    border: 1px solid #7B97A6;
     border-radius: 4px;
     padding: 9px 10px;
     background: transparent;
@@ -602,7 +602,7 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) { overflow-y: v
   .icon-bar {
     width: 22px;
     height: 2px;
-    background: #ddd;
+    background: #7B97A6;
     margin: 0 0 4px 0;
   }
   .icon-bar:last-child {
