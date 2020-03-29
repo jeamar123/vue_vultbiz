@@ -7,7 +7,7 @@
 	import profileViewsChart from '@/components/graphs/profileViewsChart';
 	import dailySalesChart from '@/components/graphs/dailySalesChart';
 
-	var home = {
+	var DashHome = {
 		components: {
 			profileViewsChart,
 			dailySalesChart,
@@ -36,5 +36,9 @@
     }
 	}
 
-	export default home
+	export default DashHome
 </script>
+
+<style lang="scss" scoped>
+	@import "./style.scss";
+</style>

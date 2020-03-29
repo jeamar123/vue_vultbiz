@@ -28,18 +28,18 @@
 			  		</div>
 
 			  		<div class="menu-links-container">
-		  				<div class="menu-link-item" v-bind:class="{'active' : $route.name == 'Home'}" v-on:click="goToPage('Home')">
+		  				<div class="menu-link-item" v-bind:class="{'active' : $route.name == 'DashHome'}" v-on:click="goToPage('DashHome')">
 				  			<div class="item-icon">
 			  					<img :src="'../assets/img/black icons/011-dashboard-1.png'">
 			  				</div>
 			  				<div class="item-name">Dashboard</div>
 		  				</div>
-			  			<!-- <div class="menu-link-item" v-bind:class="{'active' : $route.name == 'UserList'}" v-on:click="goToPage('UserList')">
+			  			<div class="menu-link-item" v-bind:class="{'active' : $route.name == 'UserList'}" v-on:click="goToPage('UserList')">
 				  			<div class="item-icon">
 			  					<img :src="'../assets/img/black icons/010-document.png'">
 			  				</div>
 			  				<div class="item-name">User List</div>
-			  			</div> -->
+			  			</div>
 			  			<div class="menu-link-item" v-bind:class="{'active' : $route.name == 'Settings'}" v-on:click="goToPage('Settings')">
 				  			<div class="item-icon">
 			  					<img :src="'../assets/img/black icons/012-gear.png'">
@@ -81,6 +81,6 @@
 </template>
 
 <script>
-	import dashboard from '@/components/dashboard'
-	export default dashboard
+	import Container from './function.vue'
+	export default Container
 </script>

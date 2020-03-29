@@ -38,6 +38,24 @@
 </template>
 
 <script>
-	import register from '@/components/register'
-	export default register
+	import axios from 'axios'
+
+	var vultbizHome = {
+		data() {
+			return {
+				showLoader : false,
+				formData : {
+					user_type: 'customer',
+				},
+			}
+		},
+		created() {
+		},
+		methods: {
+      
+
+    }
+	}
+
+	export default vultbizHome;
 </script>

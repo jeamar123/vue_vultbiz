@@ -1,7 +1,7 @@
 <script>
 	import axios from 'axios'
 
-	var dashboard = {
+	var Container = {
 		data() {
 			return {
 				showLoader : false,
@@ -68,5 +68,9 @@
     }
 	}
 
-	export default dashboard
+	export default Container
 </script>
+
+<style lang="scss" scoped>
+	@import "./style.scss";
+</style>

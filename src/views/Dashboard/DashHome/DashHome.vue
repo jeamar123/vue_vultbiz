@@ -76,6 +76,6 @@
 </template>
 
 <script>
-	import home from '@/components/home'
-	export default home
+	import DashHome from './function.vue'
+	export default DashHome
 </script>

@@ -32,6 +32,6 @@
 </template>
 
 <script>
-	import userList from '@/components/userList'
-	export default userList
+	import UserList from './function.vue'
+	export default UserList
 </script>

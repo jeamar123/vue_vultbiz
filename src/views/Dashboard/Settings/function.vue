@@ -2,7 +2,7 @@
 	import axios from 'axios'
 	import GoogleMapsApiLoader from 'google-maps-api-loader'
 
-	var settings = {
+	var Settings = {
 		data() {
 			return {
 				showLoader : false,
@@ -144,5 +144,9 @@
     }
 	}
 
-	export default settings;
+	export default Settings;
 </script>
+
+<style lang="scss" scoped>
+	@import "./style.scss";
+</style>

@@ -1,0 +1,257 @@
+.biz-home-wrapper {
+  font-family: "Helvetica Light";
+  background-color: #7B97A6;
+  height: 100vh;
+  color: #fff;
+  letter-spacing: 1.3px;
+  // padding: 20px;
+  overflow: auto;
+}
+
+.future-img {
+  height: 300px;
+}
+
+.about-us-info {
+  height: auto;
+
+  p {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+    line-height: 2;
+
+    &:last-child {
+      width: 800px;
+    }
+  }
+}
+
+.about-us-info,
+.services-container,
+.footer-container {
+  /*background-color: #2c2c2c;*/
+  background-color: #fff;
+  padding: 20px;
+  color: #333;
+
+  h1 {
+    text-align: center;
+    /*color: #B3EEF2;*/
+    color: #7B97A6;
+    font-size: 30px;
+    letter-spacing: 5px;
+    padding: 15px 0;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 15px 0;
+  }
+
+  img {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+.about-us-info {
+  padding: 20px 200px;
+}
+
+.services-container {
+  font-weight: 500;
+
+  h4 {
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  >div {
+    margin: 0 0 70px;
+  }
+
+  .services-app-container,
+  .services-tenant-container {
+    justify-content: center;
+  }
+
+  .services-app-container >div,
+  .services-tenant-container >div {
+    text-align: center;
+  }
+  .services-tenant-container p {
+    width: 320px;
+  }
+
+  .services-tenant-container {
+    flex-wrap: wrap;
+    padding: 0 12%;
+
+    >div {
+      margin: 0 40px 40px;
+    }
+  }
+
+  .services-app-container {
+    >div {
+      margin: 0 50px;
+    }
+
+    p {
+      width: 350px;
+    }
+  }
+}
+
+.footer-container {
+  color: #333;
+  text-align: center;
+  font-family: "Open Sans";
+
+  h1 {
+    color:  #333;
+    /*font-family: "Open Sans";*/
+  }
+  .bizmode-email {
+    font-size: 18px;
+  }
+
+  >div:first-child {
+    margin: 0 0 150px;
+  }
+
+  .social-container {
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px;
+
+    >div {
+      width: auto;
+      margin: 0 0 0 5px;
+    }
+
+    i {
+      font-size: 25px;
+      margin: 0 10px 0 0;
+    }
+   
+  }
+  
+}
+
+.biz-blue {
+  color: #7B97A6;
+}
+
+.biz-blue-bold {
+  color: #7B97A6;
+  font-weight: 700;
+}
+
+.biz-blue-bg {
+  background-color: #7B97A6;
+  color: #fff;
+}
+
+.login-register-modal {
+  color: #333;
+
+  .modal-container {
+    width: 300px;
+    max-height: 500px;
+    overflow: auto;
+  }
+
+  label {
+    display: block;
+    font-size: 12px;
+    margin: 0 0 10px;
+  }
+
+  .fa-times {
+    cursor: pointer;
+  }
+
+  .modal-header >div{
+    display: flex;
+    align-items: center;
+
+    >div:first-child {
+      flex: 1;
+    }
+  }
+
+  .modal-header,
+  .modal-body {
+    padding: 20px;
+  }
+
+  input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-weight: 700;
+  }
+
+  .login-reg-input-wrapper {
+    margin: 0 0 20px;
+  }
+
+  .btn-container {
+    margin: 40px 0 0;
+  }
+
+  button {
+    padding: 10px;
+    background-color: transparent;
+    border: 0;
+    margin: 0 10px 0 0;
+    width: 80px;
+    color: #fff;
+    border-radius: 2px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+
+    &.btn-login {
+      background-color: #7B97A6;
+    }
+
+    &.btn-register {
+      background-color: #1fa67a;
+    }
+  }
+}
+
+.menu-bar-right {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .about-us-info {
+    padding: 20px 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-bar-right {
+    display: block;
+    margin: 0 25px;
+    position: relative;
+  }
+  .navbar-right {
+    display: none;
+  }
+  .navbar-collapse {
+    background-color: #fff;
+    top: 64px;
+  }
+}
+
+

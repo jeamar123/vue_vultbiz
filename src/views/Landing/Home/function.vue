@@ -1,7 +1,7 @@
 <script>
-  import Modal from "../../views/modal/Modal.vue";
+  import Modal from "../../../common/components/modal";
 
-  let bizHome = {
+  let Home = {
     components: {
       Modal
     },
@@ -38,9 +38,9 @@
     }
   }
   
-  export default bizHome
+  export default Home
 </script>
 
 <style lang="scss" scoped>
-	@import "./src/assets/css/bizStyle.scss";
+	@import "./style.scss";
 </style>

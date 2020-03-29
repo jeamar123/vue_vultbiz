@@ -1,7 +1,7 @@
 <script>
 	import axios from 'axios'
 
-	var userList = {
+	var UserList = {
 		data() {
 			return {
 				showLoader : false,
@@ -21,5 +21,9 @@
     }
 	}
 
-	export default userList;
+	export default UserList;
 </script>
+
+<style lang="scss" scoped>
+	@import "./style.scss";
+</style>

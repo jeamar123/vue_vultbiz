@@ -158,6 +158,6 @@
 </template>
 
 <script>
-	import bizHome from '@/components/biz/home'
-	export default bizHome
+	import Home from './function'
+	export default Home
 </script>

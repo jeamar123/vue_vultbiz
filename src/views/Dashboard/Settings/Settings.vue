@@ -147,6 +147,6 @@
 </template>
 
 <script>
-	import settings from '@/components/settings'
-	export default settings
+	import Settings from './function.vue'
+	export default Settings
 </script>
