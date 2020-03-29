@@ -1,10 +1,9 @@
 <template>
   <div class="biz-home-wrapper">
     <div>
-      <div class="biz-header-nav">
+      <!-- <div class="biz-header-nav">
         <span>
           <a class="bizmode-logo"><span>Biz</span>mode</a>
-          <!-- <a><img :src="'../assets/img/Free_Sample_By_Wix (1).jpeg'"></a> -->
         </span>
         <ul>
           <li>
@@ -17,61 +16,61 @@
             <a @click="___showLoginRegisterModal()">SIGN UP/SIGN IN</a>
           </li>
         </ul>
-      </div>
+      </div> -->
       <div class="future-img">
         
       </div>
     </div>
     <div class="about-us-info">
       <h1>ABOUT US</h1>
-      <p><span class="biz-blue-bold">Bizmode</span> is an application that would help businesses in monitoring, advertising and planning for your next move. </p>
-      <p>The app offers Sales monitoring, Basic financial system, Inventory system, peak hours monitoring, and advertising.</p> 
-      <p>Our product would ensure that everything that comes in and out of your business will be monitored and as well as forecasting of future events and capacity that your business may experience.</p>
+      <p><span class="biz-blue-bold">Bizmode</span> is a mobile application that aims to help you locate the nearest shops and get the reservation that you need. </p>
+      <p>On the other hand, we also aim to help businesses through our system generated business monitoring to be updated on the trend that would lead them in creating a smart decision.</p> 
+      <p>Worry no more on the bulky paper works. Bring your data anywhere and check status anytime.</p>
     </div>
     <div class="services-container">
       <h1>SERVICES</h1>
       <div>
-        <h4>App</h4>
+        <h4>Application Services</h4>
         <div class="services-app-container dp-flex">
           <div>
             <img :src="'../assets/img/bizhome icons/shop.png'">
             <h4>Nearest Shop</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p>Lost? Worry no more because Bizmode is here to save the day. Through our application, locate the nearest shops, restaurants and many more in a click of your finger.</p>
           </div>
           <div>
             <img :src="'../assets/img/bizhome icons/laptop.png'">
             <h4>Reservation</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p>Busy schedule? Worry less and get your reservation ahead of time through our Bizmode application. </p>
           </div>
         </div>
       </div>
       <div>
-        <h4>Tenant</h4>
+        <h4>Tenant Services</h4>
         <div class="services-tenant-container dp-flex">
           <div>
             <img :src="'../assets/img/bizhome icons/sales-monitoring.png'">
             <h4>Sales Monitoring</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p>Create good decisions, attain smart gains and prevent future losses without giving much effort through our sales monitoring.</p>
           </div>
           <div>
             <img :src="'../assets/img/bizhome icons/inventory-system.png'">
             <h4>Inventory System</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p>Avoid stockouts and expired raw materials by being able to monitor your inventory and bring it anywhere you are without the hassle of carrying too much paper.</p>
           </div>
           <div>
             <img :src="'../assets/img/bizhome icons/financial-statement.png'">
             <h4>Basic Financial Statement</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p>Understand better the financial position and be updated on your business’ financial health to create smart decisions.</p>
           </div>
           <div>
             <img :src="'../assets/img/bizhome icons/monitor.png'">
             <h4>Peak Hours Monitoring</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p>Be efficient through forecasting when and how much to prepare in order to increase productivity.</p>
           </div>
           <div>
             <img :src="'../assets/img/bizhome icons/social-media-marketing.png'">
             <h4>Advertising</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p>Increase your market and gain more customers by being visible and creative on our mobile application.</p>
           </div>
         </div>
       </div>

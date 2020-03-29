@@ -140,6 +140,7 @@
 	.dp-inline{ display: inline; }
 	.dp-block{ display: block; }
 	.dp-flex{ display: flex;width: 100%; }
+	.dp-flex-ai{ display: flex;width: 100%; align-items: center;}
 	.dp-none{ display: none; }
 /*-------------*/
 

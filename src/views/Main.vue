@@ -1,8 +1,21 @@
 <template>
 	<div id="main-content" >
 		<section class="block-container landing-container">
-		  <div class="navbar">
+		  <div class="navbar dp-flex-ai">
+		  	<router-link tag="div" :to="{ name: 'home' }" class="bizmode-logo flex-1">
+		  		Bizmode
+		  	</router-link>
 		  	<ul class="navbar-right">
+		  		<li>
+		  			<a>
+		  				About us
+		  			</a>
+		  		</li>
+		  		<li>
+		  			<a>
+		  				Services
+		  			</a>
+		  		</li>
 		  		<router-link tag="li" :to="{ name: 'Login' }">
 		  			<a>
 		  				Login
