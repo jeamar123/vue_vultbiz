@@ -39,3 +39,18 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .menu-bar-right {
+    display: block;
+    margin: 0 25px;
+    position: relative;
+  }
+  .navbar-right {
+    display: none;
+  }
+  .navbar-collapse {
+    background-color: #fff;
+    top: 64px;
+  }
+}
