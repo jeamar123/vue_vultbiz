@@ -13,6 +13,7 @@ import { Container } from './views/Dashboard/Container'
 import { DashHome } from './views/Dashboard/DashHome'
 import { UserList } from './views/Dashboard/UserList'
 import { Settings } from './views/Dashboard/Settings'
+import { PeakHours } from './views/Dashboard/PeakHours'
 
 // LANDING PAGE ROUTES
 import { Main } from './views/Landing/Main'
@@ -47,8 +48,9 @@ export default new Router({
       // meta: { auth: true },
       children: [
         { name: 'DashHome', path: '/dashboard/home', component: DashHome },
-        { name: 'UserList', path: '/dashboard/user-list', component: UserList },
+        // { name: 'UserList', path: '/dashboard/user-list', component: UserList },
         { name: 'Settings', path: '/dashboard/settings', component: Settings },
+        { name: 'PeakHours', path: '/dashboard/peak-hours', component: PeakHours },
       ]
     },
 

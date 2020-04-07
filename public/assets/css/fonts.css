@@ -57,3 +57,8 @@
         src: url('../fonts/myriad/MyriadPro-Light.otf')  format('truetype');
     }
 
+    @font-face {
+        font-family: 'Myriad Bold'; /* Global font */
+        src: url('../fonts/myriad/MyriadPro-Bold.otf')  format('truetype');
+    }
+
