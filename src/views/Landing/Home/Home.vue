@@ -35,12 +35,12 @@
           <div>
             <img :src="'../assets/img/bizhome icons/shop.png'">
             <h4>Nearest Shop</h4>
-            <p>Lost? Worry no more because Bizmode is here to save the day. Through our application, locate the nearest shops, restaurants and many more in a click of your finger.</p>
+            <p class="txt-left">Lost? Worry no more because Bizmode is here to save the day. Through our application, locate the nearest shops, restaurants and many more in a click of your finger.</p>
           </div>
           <div>
             <img :src="'../assets/img/bizhome icons/laptop.png'">
             <h4>Reservation</h4>
-            <p>Busy schedule? Worry less and get your reservation ahead of time through our Bizmode application. </p>
+            <p class="txt-left">Busy schedule? Worry less and get your reservation ahead of time through our Bizmode application. </p>
           </div>
         </div>
       </div>
@@ -50,27 +50,27 @@
           <div>
             <img :src="'../assets/img/bizhome icons/sales-monitoring.png'">
             <h4>Sales Monitoring</h4>
-            <p>Create good decisions, attain smart gains and prevent future losses without giving much effort through our sales monitoring.</p>
+            <p class="txt-left">Create good decisions, attain smart gains and prevent future losses without giving much effort through our sales monitoring.</p>
           </div>
           <div>
             <img :src="'../assets/img/bizhome icons/inventory-system.png'">
             <h4>Inventory System</h4>
-            <p>Avoid stockouts and expired raw materials by being able to monitor your inventory and bring it anywhere you are without the hassle of carrying too much paper.</p>
+            <p class="txt-left">Avoid stockouts and expired raw materials by being able to monitor your inventory and bring it anywhere you are without the hassle of carrying too much paper.</p>
           </div>
           <div>
             <img :src="'../assets/img/bizhome icons/financial-statement.png'">
             <h4>Basic Financial Statement</h4>
-            <p>Understand better the financial position and be updated on your business’ financial health to create smart decisions.</p>
+            <p class="txt-left">Understand better the financial position and be updated on your business’ financial health to create smart decisions.</p>
           </div>
           <div>
             <img :src="'../assets/img/bizhome icons/monitor.png'">
             <h4>Peak Hours Monitoring</h4>
-            <p>Be efficient through forecasting when and how much to prepare in order to increase productivity.</p>
+            <p class="txt-left">Be efficient through forecasting when and how much to prepare in order to increase productivity.</p>
           </div>
           <div>
             <img :src="'../assets/img/bizhome icons/social-media-marketing.png'">
             <h4>Advertising</h4>
-            <p>Increase your market and gain more customers by being visible and creative on our mobile application.</p>
+            <p class="txt-left">Increase your market and gain more customers by being visible and creative on our mobile application.</p>
           </div>
         </div>
       </div>
