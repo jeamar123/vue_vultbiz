@@ -1,8 +1,9 @@
 /* gloabl css */
 :root {
-  --primary-font: 'Helvetica Thin';
+  --primary-font: 'Helvetica Light';
   --primary-bold-font: 'Helvetica Light';
   --secondary-font: 'Helvetica Light';
+  --secondary-bold-font: 'Helvetica Medium';
 
   --font-black: #333;
   --font-gray: #777;
@@ -17,11 +18,8 @@
   --primary-btn: #bbb;
   --danger-btn: #ff5757;
 
-  --primary-font-color: #666;
+  --primary-font-color: #444;
   --secondary-font-color: #777;
-
-
-
 
   /*----------Navbar variables----------*/
     --navbar-bg-color: #FFF;
@@ -31,23 +29,32 @@
 
 
 
-  /*---------sidemenu variables---------*/
-    /*--sidemenu-bg-color: #028476;
-    --sidemenu-logo-bg-color: #028476;
-    --profile-bg-color: rgba(68,68,68,.57);
-    --sidemenu-font-color: #ddd;
-    --sidemenu-secondary-font-color: #bbb;
-    --item-font-color: #ccc;
-    --item-active-color: #fafafa;*/
 
-    --sidemenu-bg-color: #FFF;
-    --sidemenu-logo-bg-color: #fafafa;
-    --profile-bg-color: #f9f9f9;
-    --sidemenu-font-color: #444;
-    --sidemenu-secondary-font-color: #444;
-    --item-font-color: #999;
-    --item-active-color: #444;
+
+/*------------ DASHBOARD UI CONFIG --------------*/
+  --dash-primary-color: #3c5a86;
+  --dash-secondary-color: #2d4465;
+  --dash-bg-color: #3c5a86;
+  --dash-font-color-black: #444;
+  --dash-font-color-white: #c0d0e5;
+
+  --dash-bgcolor: #f3f3f3;
+
+  /*---------------navbar---------------*/
+    --dash-navbar-bgcolor: var(--dash-primary-color);
   /*------------------------------------*/
+
+  /*---------sidemenu variables---------*/
+    --sidemenu-bg-color: var(--dash-secondary-color);
+    --sidemenu-logo-bg-color: var(--dash-secondary-color);
+    --profile-bg-color: var(--dash-secondary-color);
+    --sidemenu-font-color: #eee;
+    --sidemenu-secondary-font-color: #eee;
+    --item-font-color: var(--dash-font-color-white);
+    --item-active-color: #eee;
+  /*------------------------------------*/
+
+/*-----------------------------------------------*/
 
 
 

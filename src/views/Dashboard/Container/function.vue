@@ -6,6 +6,8 @@
 			return {
 				showLoader : false,
 				user_details: {},
+				isFinanceDropdownShow:	false,
+				isSalesDropdownShow: false
 			}
 		},
 		created() {
@@ -27,7 +29,9 @@
       		if( this.$route.name != page_name ){
       			this.$router.push({ name: page_name });
       		}
-      	}
+				}
+				this.isSalesDropdownShow = false;
+				this.isFinanceDropdownShow = false;
       },
       logout(){
       	this.$swal({
@@ -64,7 +68,17 @@
 						console.log( err );
 						this.hideLoading();
 					});
-      }
+			},
+			toggleDropdown(opt){
+				if(opt == 'Finance'){
+					this.isFinanceDropdownShow = this.isFinanceDropdownShow ? false : true;
+					this.isSalesDropdownShow = false;
+				}
+				if(opt == 'Sales'){
+					this.isSalesDropdownShow = this.isSalesDropdownShow ? false : true;
+					this.isFinanceDropdownShow = false;
+				}
+			},
     }
 	}
 

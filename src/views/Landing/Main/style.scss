@@ -1,3 +1,44 @@
+.navbar{
+	width: 100%;
+  background-color: var(--navbar-bg-color);
+  /*-webkit-box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);
+  box-shadow: 0 0 24px 0 rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.02);*/
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+  border-radius: 3px;
+  border-bottom: 1px solid #ddd;
+}
+.navbar ul.navbar-right{
+  text-align: right;
+}
+.navbar ul li{
+	display: inline-block;
+	position: relative;
+}
+.navbar ul li a{
+  display: block;
+  font-size: 14px;
+  color: var(--navbar-font-color);
+  padding: 15px 25px;
+  font-weight: 700;
+  font-family: var( --primary-font );
+  border-right: 1px solid #eee;
+  text-align: center;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+.navbar ul li a i{
+	font-size: 20px;
+	margin-right: 5px;
+	vertical-align: bottom;
+}
+.navbar ul li.active a,
+.navbar ul li:hover a{
+  color: var(--navbar-active-color);
+}
+.navbar ul li:last-child a {
+	/*border: none;*/
+}
+
 
 .navbar ul li a {
   border: 0;

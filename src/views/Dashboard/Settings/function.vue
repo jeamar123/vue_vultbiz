@@ -23,17 +23,18 @@
 		      ['Bank of the Philippine Islands', 8.478838, 124.644544],
 				],
 				isCustomer: null,
+				selectedTab: 'details',
 			}
 		},
-		created() {
-			
-		},
-		async mounted() {
-	    const googleMapApi = await GoogleMapsApiLoader({
+		async created() {
+			const googleMapApi = await GoogleMapsApiLoader({
 	      apiKey: this.apiKey
 	    })
 	    this.google = googleMapApi;
 	    this.getUserDetails();
+		},
+		async mounted() {
+	    
 	  },
 		methods: {
       showLoading() {
@@ -42,7 +43,7 @@
       hideLoading() {
       	setTimeout(()=>{
 				  this.showLoader = false;
-				},1000);
+				},100);
       },
       initializeMap() {
 	      const mapContainer = this.$refs.googleMap;
@@ -101,7 +102,6 @@
 							this.user_details = res.data.user;
 							this.user_details.original_photo = this.user_details.photo;
 							this.isCustomer = this.user_details.user_type == 'customer' ? true : false;
-							this.initializeMap();
 						}else{
 							this.$swal( 'Error!', res.data.message, 'error');
 						}
@@ -140,7 +140,16 @@
 						console.log( err );
 						this.hideLoading();
 					});
-      }
+			},
+			selectTab(opt){
+				this.selectedTab = opt;
+
+				if( opt == 'location' ){
+					setTimeout(() => {
+						this.initializeMap();
+					}, 300);
+				}
+			}
     }
 	}
 
