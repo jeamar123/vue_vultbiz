@@ -1,28 +1,20 @@
 .biz-home-wrapper {
   font-family: "Helvetica Light";
-  background-color: #7B97A6;
+  // background-color: #7B97A6;
+  background-color: #3B5A86;
   height: 100vh;
   color: #fff;
   letter-spacing: 1.3px;
   // padding: 20px;
   overflow: auto;
+
+  .hero-container {
+    height: 100%;
+  }
 }
 
 .future-img {
   height: 300px;
-}
-
-.about-us-info {
-  height: auto;
-
-  p {
-    display: block;
-    width: auto;
-    margin: 0 auto;
-    text-align: center;
-    font-weight: 500;
-    line-height: 2;
-  }
 }
 
 .about-us-info,
@@ -36,7 +28,7 @@
   h1 {
     text-align: center;
     /*color: #B3EEF2;*/
-    color: #7B97A6;
+    color: #3B5A86;
     font-size: 30px;
     letter-spacing: 5px;
     padding: 15px 0;
@@ -50,13 +42,29 @@
   }
 
   img {
-    width: 128px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
   }
 }
 
 .about-us-info {
-  padding: 20px 200px;
+  padding: 40px;
+  
+  img {
+    width: 650px;
+    height: 450px;
+  }
+  h1 {
+    text-align: left;
+    margin: 20px 0;
+  }
+  p {
+    display: block;
+    width: 550px;
+    margin: 0 auto;
+    font-weight: 500;
+    line-height: 2;
+  }
 }
 
 .services-container {
@@ -64,7 +72,7 @@
 
   h4 {
     font-size: 18px;
-    text-align: center;
+    // text-align: center;
     margin: 20px 0;
   }
 
@@ -72,22 +80,27 @@
     margin: 0 0 70px;
   }
 
-  .services-app-container,
-  .services-tenant-container {
-    justify-content: center;
+  .mobile-app-img-container img {
+    height: 600px;
+    width: 400px;
   }
 
-  .services-app-container >div,
-  .services-tenant-container >div {
-    text-align: center;
-  }
+  // .services-app-container,
+  // .services-tenant-container {
+  //   justify-content: center;
+  // }
+
+  // .services-app-container >div,
+  // .services-tenant-container >div {
+  //   text-align: center;
+  // }
   .services-tenant-container p {
     width: 320px;
   }
 
   .services-tenant-container {
     flex-wrap: wrap;
-    padding: 0 12%;
+    // padding: 0 12%;
 
     >div {
       margin: 0 40px 40px;
@@ -142,11 +155,11 @@
 }
 
 .biz-blue {
-  color: #7B97A6;
+  color: #3B5A86;
 }
 
 .biz-blue-bold {
-  color: #7B97A6;
+  color: #3B5A86;
   font-weight: 700;
 }
 
