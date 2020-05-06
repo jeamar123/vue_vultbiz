@@ -24,7 +24,8 @@
     <div class="about-us-info">
       <div class="dp-flex">
         <div>
-          <img :src="'../assets/img/phone_hand_PNG21.png'">
+          <!-- <img :src="'../assets/img/phone_hand_PNG21.png'"> -->
+          <img :src="'../assets/img/mobile_app.png'">
         </div>
         <div>
           <h1>ABOUT US</h1>

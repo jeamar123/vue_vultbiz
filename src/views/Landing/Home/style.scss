@@ -49,10 +49,16 @@
 
 .about-us-info {
   padding: 40px;
+
+  >div {
+    justify-content: center;
+  }
   
   img {
-    width: 650px;
-    height: 450px;
+    // width: 650px;
+    // height: 450px;
+    width: 400px;
+    height: 550px;
   }
   h1 {
     text-align: left;
