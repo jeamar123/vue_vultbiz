@@ -40,7 +40,7 @@
       <div class="dp-flex">
         <div>
           <div>
-            <h4>Application Services</h4>
+            <h4 class="services-title">Application Services</h4>
             <div class="services-app-container dp-flex">
               <div>
                 <img :src="'../assets/img/bizhome icons/shop.png'">
@@ -55,7 +55,7 @@
             </div>
           </div>
           <div>
-            <h4>Tenant Services</h4>
+            <h4 class="services-title">Tenant Services</h4>
             <div class="services-tenant-container dp-flex">
               <div>
                 <img :src="'../assets/img/bizhome icons/sales-monitoring.png'">
@@ -85,7 +85,7 @@
             </div>
           </div>
         </div>
-        <div class="mobile-app-img-container">
+        <div v-if="false" class="mobile-app-img-container">
           <img :src="'../assets/img/mobile_app.png'">
         </div>
       </div>

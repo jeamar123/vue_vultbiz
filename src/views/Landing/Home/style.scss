@@ -91,10 +91,11 @@
     width: 400px;
   }
 
-  // .services-app-container,
-  // .services-tenant-container {
-  //   justify-content: center;
-  // }
+  .services-app-container,
+  .services-tenant-container {
+    justify-content: center;
+    padding: 50px 0;
+  }
 
   // .services-app-container >div,
   // .services-tenant-container >div {
@@ -111,6 +112,9 @@
     >div {
       margin: 0 40px 40px;
     }
+  }
+  .services-title {
+    text-align: center;
   }
 
   .services-app-container {
