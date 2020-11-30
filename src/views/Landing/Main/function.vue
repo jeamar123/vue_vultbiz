@@ -17,7 +17,7 @@
       hideLoading() {
       	setTimeout(()=>{
 				  this.showLoader = false;
-				},1000);
+				},100);
       },
       _toggleMenuBar_() {
         this.global_isShowNavbarCollapse = this.global_isShowNavbarCollapse == false ? true : false;

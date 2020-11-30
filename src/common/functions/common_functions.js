@@ -1,15 +1,15 @@
 import Vue from 'vue';
 import router from '../../router';
-import * as Config from '../constant.js';
+import * as Config from '../constants.js';
 import axios from 'axios';
 import moment from "moment";
-import jsPDF from 'jspdf'
-import 'jspdf-autotable';
+// import jsPDF from 'jspdf';
+// import 'jspdf-autotable';
 
 const	defaultHeaders	=		{
 	// 'Accept':	'application/json',
 	// 'Content-Type':	'application/json',
-	'Authorization':	localStorage.vue_admin_session
+	'Authorization':	localStorage.company_session
 };
 const	uploadHeaders	=		{
 	// 'Accept':	'application/json',
@@ -60,6 +60,16 @@ const _login_	=	(params) => { // ADMIN LOGIN API
 	return	_axiosCall_(req);
 };
 
+const _register_	=	(params) => { // ADMIN LOGIN API
+	let	req	=	{
+		method:	'POST',
+		url:	Config.AUTH_REGISTER,
+		data:	params,
+		header:	defaultHeaders,
+	};
+	return	_axiosCall_(req);
+};
+
 const _goBack_	=	()	=>	{ // ROUTER BACK LAST STATE
 	router.back();
 }
@@ -96,127 +106,25 @@ const _globalStorage_	=	{ // CUSTOM LOCAL STORAGE
 const _formChecker_	=	(formData)	=>	{
 	let error_checkForm = [];
 	console.log(formData);
-	if (formData.hasOwnProperty('fullname') && !formData.fullname) {
-		error_checkForm.push("Name.");
+	if (formData.hasOwnProperty('company_name') && !formData.company_name) {
+		error_checkForm.push("Company Name is required");
 	}
-	if (formData.hasOwnProperty('phone_code') && !formData.phone_code) {
-		error_checkForm.push("Area Code.");
-	}
-	if (formData.hasOwnProperty('phone_no') && !formData.phone_no) {
-		error_checkForm.push("Mobile Number.");
-	}
-	if (formData.hasOwnProperty('phone') && !formData.phone) {
-		error_checkForm.push("Phone Number.");
-	}
-	if (formData.hasOwnProperty('job_title') && !formData.job_title) {
-		error_checkForm.push("Job Title.");
-	}
-	if (formData.hasOwnProperty('dob') && !formData.dob) {
-		error_checkForm.push("Date of Birth.");
+	if (formData.hasOwnProperty('mobile') && !formData.mobile) {
+		error_checkForm.push("Mobile is required");
 	}
 	if (formData.hasOwnProperty('email') && !formData.email) {
-		error_checkForm.push('Email.');
-	} else if (formData.hasOwnProperty('email')) {
-		if( !_validateEmail_(formData.email) ){
-			error_checkForm.push('Valid email.');
+		error_checkForm.push("Email is required");
+	}
+	if (formData.hasOwnProperty('password') && !formData.password) {
+		error_checkForm.push("Password is required");
+	}
+	if (formData.hasOwnProperty('confirm_password') && !formData.confirm_password) {
+		error_checkForm.push("Confirm Password is required");
+	}
+	if (formData.hasOwnProperty('confirm_password') && formData.confirm_password) {
+		if (formData.password != formData.confirm_password) {
+			error_checkForm.push("Passwords do not match");
 		}
-	}
-	if (formData.hasOwnProperty('plan_start') && !formData.plan_start) {
-		error_checkForm.push("Plan Start.");
-	}
-	if (formData.hasOwnProperty('postal_code') && !formData.postal_code) {
-		error_checkForm.push("Postal Code.");
-	}
-	if (formData.hasOwnProperty('relationship') && !formData.relationship) {
-		error_checkForm.push("Relationship.");
-	}
-	if (formData.hasOwnProperty('employees') && formData.employees === undefined) {
-		error_checkForm.push("Employees.");
-	}else if( formData.hasOwnProperty('employees') ){
-		if( formData.employees < 3 ){
-			error_checkForm.push("Employees should be at least 3.");
-		}
-	}
-	if (formData.hasOwnProperty('account_type') && !formData.account_type) {
-		error_checkForm.push("Account Type.");
-	}
-	if (formData.hasOwnProperty('payment_status') && formData.payment_status === undefined) {
-		error_checkForm.push("Payment Status.");
-	}
-	if (formData.hasOwnProperty('medical_credits') && formData.medical_credits === undefined)	{
-		error_checkForm.push('Medical Credits.');
-	}
-	if (formData.hasOwnProperty('wellness_credits') && formData.wellness_credits === undefined)	{
-		error_checkForm.push('Wellness Credits.');
-	}
-	if (formData.hasOwnProperty('medical_allocation') && formData.medical_allocation === undefined)	{
-		error_checkForm.push('Medical Credits.');
-	}
-	if (formData.hasOwnProperty('wellness_allocation') && formData.wellness_allocation === undefined)	{
-		error_checkForm.push('Wellness Credits.');
-	}
-
-	if (formData.hasOwnProperty('company_name') && !formData.company_name)	{
-		error_checkForm.push('Company Name.');
-	}
-	if (formData.hasOwnProperty('company_address') && !formData.company_address)	{
-		error_checkForm.push('Company Address.');
-	}
-	if (formData.hasOwnProperty('first_name') && !formData.first_name)	{
-		error_checkForm.push('First Name.');
-	}
-	if (formData.hasOwnProperty('last_name') && !formData.last_name)	{
-		error_checkForm.push('Last Name.');
-	}
-	if (formData.hasOwnProperty('billing_first_name') && !formData.billing_first_name)	{
-		error_checkForm.push('Billing First Name.');
-	}
-	if (formData.hasOwnProperty('billing_last_name') && !formData.billing_last_name)	{
-		error_checkForm.push('Billing Last Name.');
-	}
-	if (formData.hasOwnProperty('billing_email') && !formData.billing_email)	{
-		error_checkForm.push('Billing Email.');
-	}
-	if (formData.hasOwnProperty('billing_phone') && !formData.billing_phone)	{
-		error_checkForm.push('Billing Phone Number.');
-	}
-	if (formData.hasOwnProperty('companyContacts'))	{
-		formData.companyContacts.map((value, key)	=>	{
-			if (value.hasOwnProperty('first_name') && !value.first_name)	{
-				error_checkForm.push('Contact First Name.');
-			}
-			if (value.hasOwnProperty('last_name') && !value.last_name)	{
-				error_checkForm.push('Contact Last Name.');
-			}
-			if (value.hasOwnProperty('email') && !value.email)	{
-				error_checkForm.push('Contact Email.');
-			}
-			if (value.hasOwnProperty('phone') && !value.phone)	{
-				error_checkForm.push('Contact Phone Number.');
-			}
-		});
-	}
-
-	if (formData.hasOwnProperty('paid_amount') && !formData.paid_amount)	{
-		error_checkForm.push('Paid Amount.');
-	}
-	if (formData.hasOwnProperty('transaction_date') && !formData.transaction_date)	{
-		error_checkForm.push('Date Received.');
-	}
-	if (formData.hasOwnProperty('invoice_due_date') && !formData.invoice_due_date)	{
-		error_checkForm.push('Invoice Due Date.');
-	}
-	if (formData.hasOwnProperty('invoice_date') && !formData.invoice_date)	{
-		error_checkForm.push('Invoice Date.');
-	}
-	if (formData.hasOwnProperty('individual_price') && !formData.individual_price)	{
-		error_checkForm.push('Individual Price.');
-	}
-	if (formData.hasOwnProperty('duration') && !formData.duration)	{
-		error_checkForm.push('Duration.');
-	}
-	if (formData.hasOwnProperty('payment_status') && formData.payment_status == undefined)	{
-		error_checkForm.push('Payment Status.');
 	}
 	
 	
@@ -226,9 +134,9 @@ const _formChecker_	=	(formData)	=>	{
 		console.log(error_checkForm);
 		let _newError = [];
 		error_checkForm.map(value => {
-			_newError.push(`<span class="block p-1 text-red-500 text-center w-1/2 mx-auto my-0">${value}</span>`);
+			_newError.push(`<li class="form-error-li">${value}</li>`);
 		});
-		Vue.swal( 'Required', _newError.join('\n\n'), 'warning' );
+		Vue.swal( 'Error!', `<ul class="swal-form-errors-container">${ _newError.join('\n\n') }</ul>`, 'warning' );
 		return false;
 	}
 }
@@ -237,11 +145,11 @@ const _formChecker_	=	(formData)	=>	{
 
 export	{
 	_login_,
+	_register_,
 	_goBack_,
 	_showPageLoading_,
 	_hidePageLoading_,
 	_validateEmail_,
 	_globalStorage_,
-  _childGetStorage_,
   _formChecker_,
 }

@@ -3,16 +3,8 @@
 		<form>
 			<p class="auth-title">Register</p>
 			<div class="form-div">
-				<label>User Type</label>
-				<select v-model="formData.user_type">
-					<option value="customer">Customer</option>
-					<option value="tenant">Tenant</option>
-				</select>
-			</div>
-			<div class="form-div">
-				<label v-if="formData.user_type == 'tenant'">Company Name</label>
-				<label v-if="formData.user_type == 'customer'">Full Name</label>
-				<input type="text" name="" v-model="formData.name">
+				<label>Company Name</label>
+				<input type="text" name="" v-model="formData.company_name">
 			</div>
 			<div class="form-div">
 				<label>Email Address</label>
@@ -38,7 +30,12 @@
 </template>
 
 <script>
-	import axios from 'axios'
+	import { 
+		_showPageLoading_,
+		_hidePageLoading_,
+		_register_,
+		_formChecker_,
+	} from '../common/functions/common_functions';
 
 	var vultbizHome = {
 		data() {
@@ -52,7 +49,29 @@
 		created() {
 		},
 		methods: {
-      
+      submitRegister( formData ){
+				let params = {
+      		company_name : formData.company_name,
+      		email : formData.email,
+      		mobile : formData.mobile,
+      		password : formData.password,
+      		confirm_password : formData.confirm_password,
+				}
+				if( _formChecker_(params) == false ){
+					return false;
+				}
+				_showPageLoading_();
+				_register_(params)
+					.then((res)	=>	{
+						console.log(res);
+						_hidePageLoading_();
+						if( res.data.status ){
+							this.$swal( 'Success!', res.data.message, 'success');
+						}else{
+							this.$swal( 'Error!', res.data.message, 'error');
+						}
+					});
+			},
 
     }
 	}

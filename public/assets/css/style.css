@@ -741,6 +741,19 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) { overflow-y: v
   .warning-global-container.swal2-popup.danger .swal2-confirm{
     background-color: #ef6562 !important;
   }
+
+  .swal-form-errors-container{
+    list-style: disc;
+    text-align: left;
+    margin: 20px auto;
+    width: fit-content;
+  }
+  .swal-form-errors-container .form-error-li{
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
 /*----------------*/
 
 .disabled-pointer{

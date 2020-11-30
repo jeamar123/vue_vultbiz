@@ -1,0 +1,110 @@
+<script>
+	import axios from 'axios'
+	import GoogleMapsApiLoader from 'google-maps-api-loader'
+
+	var BusinessInformation = {
+		data() {
+			return {
+				showLoader : false,
+				user_details : {},
+				upload_active : false,
+				isCustomer: null,
+				selectedTab: 'details',
+			}
+		},
+		async created() {
+	    this.getUserDetails();
+		},
+		methods: {
+      showLoading() {
+      	this.showLoader = true;
+      },
+      hideLoading() {
+      	setTimeout(()=>{
+				  this.showLoader = false;
+				},100);
+      },
+      removeUpload(){
+      	this.upload_active = false;
+      	this.user_details.photo = this.user_details.original_photo;
+      },
+      photoChanged( file ){
+      	this.upload_active = true;
+      	this.user_details.photo = URL.createObjectURL( file[0] );
+      	this.$refs.photoUploader.value = null;
+		      	// this.$parent.showLoading();
+			   //  	data[0].uploading = 20;
+			   //  	this.uploading_files.push( data[0] );
+			   //  	let formData = new FormData();
+			   //  	formData.append('file', data[0]);
+			   //  	this.$refs.receiptUploader.value = null;
+			   //  	this.isNextBtnDisabled = true;
+						// axios.post( 
+						// 	axios.defaults.serverUrl + "/employee/save/e_claim_receipt", 
+						// 	formData, 
+						// 	{ headers: { 'Content-Type': 'multipart/form-data' } })
+						// 	.then(res => {
+						// 		// console.log( res );
+						// 	})
+						// 	.catch(err => {
+						// 		console.log( err );
+						// 	});
+      },
+      getUserDetails(){
+      	axios.get( axios.defaults.serverUrl + '/api/user/' + localStorage.user_id )
+					.then(res => {
+						console.log( res );
+						this.hideLoading();
+						if( res.data.status ){
+							// this.$router.push({ name: 'Login' });
+							this.user_details = res.data.user;
+							this.user_details.original_photo = this.user_details.photo;
+							this.isCustomer = this.user_details.user_type == 'customer' ? true : false;
+						}else{
+							this.$swal( 'Error!', res.data.message, 'error');
+						}
+					})
+					.catch(err => {
+						console.log( err );
+						this.hideLoading();
+					});
+      },
+      submitUpdateUser( formData ){
+      	var data = {
+      		user_id : formData.id,
+      		name : formData.name,
+	        email : formData.email,
+	        address : formData.address,
+	        contact_number : formData.contact_number,
+	        photo : formData.photo,
+	        nature_of_business : formData.nature_of_business,
+	        category : formData.category,
+	        latitude : formData.latitude,
+	        longitude : formData.longitude,
+      	}
+      	axios.post( axios.defaults.serverUrl + '/api/user/update', data )
+					.then(res => {
+						console.log( res );
+						this.hideLoading();
+						if( res.data.status ){
+							this.getUserDetails();
+							this.$parent.getUserDetails();
+							this.$swal( 'Success!', res.data.message, 'success');
+						}else{
+							this.$swal( 'Error!', res.data.message, 'error');
+						}
+					})
+					.catch(err => {
+						console.log( err );
+						this.hideLoading();
+					});
+			},
+    }
+	}
+
+	export default BusinessInformation;
+</script>
+
+<style lang="scss" scoped>
+	@import "./style.scss";
+</style>

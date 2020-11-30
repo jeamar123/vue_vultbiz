@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import axios from 'axios'
 
 axios.defaults.baseURL = process.env.BASE_URL;
-axios.defaults.serverUrl = 'http://localhost:8000';
+axios.defaults.serverUrl = 'http://localhost:8001';
 
 // DASHBOARD ROUTES
 
@@ -12,8 +12,12 @@ import Register from './views/Register.vue'
 import { Container } from './views/Dashboard/Container'
 import { DashHome } from './views/Dashboard/DashHome'
 import { UserList } from './views/Dashboard/UserList'
-import { Settings } from './views/Dashboard/Settings'
 import { PeakHours } from './views/Dashboard/PeakHours'
+
+import { Settings } from './views/Dashboard/Settings'
+import { BusinessInformation } from './views/Dashboard/BusinessInformation'
+import { BusinessHours } from './views/Dashboard/BusinessHours'
+import { Location } from './views/Dashboard/Location'
 
 // LANDING PAGE ROUTES
 import { Main } from './views/Landing/Main'
@@ -49,8 +53,18 @@ export default new Router({
       children: [
         { name: 'DashHome', path: '/dashboard/home', component: DashHome },
         // { name: 'UserList', path: '/dashboard/user-list', component: UserList },
-        { name: 'Settings', path: '/dashboard/settings', component: Settings },
         { name: 'PeakHours', path: '/dashboard/peak-hours', component: PeakHours },
+        { 
+          name: 'Settings', 
+          path: '/dashboard/settings', 
+          component: Settings ,
+          redirect: '/dashboard/settings/information',
+          children: [
+            { name: 'BusinessInformation', path: '/dashboard/settings/information', components: { 'settings-child' : BusinessInformation } },
+            { name: 'BusinessHours', path: '/dashboard/settings/business-hours', components: { 'settings-child' : BusinessHours } },
+            { name: 'Location', path: '/dashboard/settings/location', components: { 'settings-child' : Location } },
+          ]
+        },
       ]
     },
 

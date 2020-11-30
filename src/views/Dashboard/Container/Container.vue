@@ -60,13 +60,13 @@
 										<div class="item-name">Income</div>
 									</div>
 								</div>
-
-							<!-- <div class="menu-link-item" v-bind:class="{'active' : $route.name == 'PeakHours'}" v-on:click="goToPage('PeakHours')">
+							
+							<div class="menu-link-item">
 				  			<div class="item-icon">
 									<i class="fa fa-question"></i>
 			  				</div>
 			  				<div class="item-name">Peak Hours</div>
-		  				</div> -->
+		  				</div>
 
 							<div class="menu-link-item" v-on:click="toggleDropdown('Sales')">
 				  			<div class="item-icon">
@@ -89,7 +89,7 @@
 			  				</div>
 			  				<div class="item-name">User List</div>
 			  			</div> -->
-			  			<div class="menu-link-item" v-bind:class="{'active' : $route.name == 'Settings'}" v-on:click="goToPage('Settings')">
+			  			<div class="menu-link-item" v-bind:class="{'active' : $route.path.indexOf('settings') != -1 }" v-on:click="goToPage('Settings')">
 				  			<div class="item-icon">
 			  					<img :src="'../assets/img/white icons/012-gear.png'">
 			  				</div>
